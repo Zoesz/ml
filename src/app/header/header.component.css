@@ -1,0 +1,97 @@
+/* Style the header with a grey background and some padding */
+.header1 {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+/* Style the header links */
+.header1 a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header1 a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header1 a:hover {
+  font-color: #ddd;
+  color: blue;
+}
+
+/* Style the active/current link*/
+.header1 a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header1-left {
+  float: right;
+}
+
+i .fas {
+  color: rgba(64,64,64,0.95);
+  font-size:25px;
+  padding-right: 10px;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header1 a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header1-left {
+    float: none;
+  }
+}
+
+
+/* header 2*/
+
+/* Style the header with a grey background and some padding */
+.header2 {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header2 a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+/* Float the link section to the right */
+.header2-left {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header2 a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header2-left {
+    float: none;
+  }
+}
+
