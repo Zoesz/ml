@@ -8,22 +8,25 @@ import {DOCUMENT} from '@angular/common';
 })
 export class HeaderComponent {
 
-  public headerScrolled;
 
-  constructor(
-    @Inject(DOCUMENT) private doc: Document,
-  @Inject(WINDOW) private window, private el: ElementRef) {}
+  cssStringVar = 'header1';
 
-  @HostListener('window:scroll', [])
+
+  public headerScrolled = false;
+
+
+  @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    const componentPosition = this.el.nativeElement.offsetTop;
-    console.log(componentPosition);
-    const num = this.doc.body.scrollTop;
-    console.log(this.headerScrolled + '' + num);
-    if ( num > 50 ) {
+    // const componentPosition = this.el.nativeElement.offsetTop;
+    // console.log(componentPosition);
+    const num = window.pageYOffset;
+    console.log(num);
+    if (num > 50) {
       this.headerScrolled = true;
+      this.cssStringVar = 'header2';
     } else if (this.headerScrolled && num < 600) {
       this.headerScrolled = false;
+      this.cssStringVar = 'header1';
     }
     console.log(this.headerScrolled + 'zzzz' + num);
   }
